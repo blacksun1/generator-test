@@ -5,7 +5,7 @@
   "main": "Gruntfile.js",
   "engines": {
     "node": ">=0.11.0"
-    },
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "grunt && node dist/app"
@@ -15,7 +15,8 @@
   "dependencies": {
     "babel-polyfill": "^6.0.14",
     "chalk": "^1.1.1",
-    "intravenous": "^0.1.4-beta"
+    "intravenous": "^0.1.4-beta",
+    "memwatch-next": "^0.2.10"
   },
   "devDependencies": {
     "babel": "^5.0.0",

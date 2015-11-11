@@ -1,22 +1,37 @@
 "use strict";
 
 function* channel () {
-    const name = yield "hello, what is your name?"; // [1]
-    return `well hi there ${name}`;
+  console.log(1);
+  const name = yield "hello, what is your name?"; // [1]
+  console.log(2);
+  return `well hi there ${name}`;
 }
 
 function* chatter (value) {
-    let valueNew = value * 2;
-    do {
-        yield valueNew;
-        valueNew = valueNew * 2;
-    } while(valueNew < 100000);
+  let valueNew = value;
+
+  do {
+    valueNew = valueNew * 2;
+    yield valueNew;
+  } while(valueNew < 1000000);
 }
 
 const gen = channel();
-console.log(gen.next()); // hello, what is your name? [2]
-console.log(gen.next("billy")); // well hi there billy [3]
+console.log(gen.next());
+console.log(gen.next("billy"));
 
 for (const value of chatter(10)) {
-    console.log(value);
+  console.log(value);
 }
+
+function superhero(isSuperhero) {
+  return function(target) {
+    target.isSuperhero = isSuperhero;
+  };
+}
+
+@superhero(true)
+class Superman {
+}
+
+console.log(`Superman is superhero: ${Superman.isSuperhero}`);

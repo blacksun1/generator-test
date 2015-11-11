@@ -3,6 +3,7 @@
         "arrowFunctions": true,
         "modules": true
     },
+    "parser": "babel-eslint",
     "env": {
         "node": true,
         "es6": true
@@ -21,7 +22,7 @@
         "dot-notation": 2,
         "eqeqeq": 2,
         "guard-for-in": 2,
-        "indent": [2, 4],
+        "indent": [2, 2],
         "no-alert": 2,
         "no-caller": 2,
         "no-class-assign": 2,

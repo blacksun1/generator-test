@@ -1,6 +1,6 @@
 # generator-test
 
-Testing out Generators.
+Testing out Generators. Testing out WeakMap and storing private data in classes.
 
 ## Prerequisites
 
@@ -18,8 +18,16 @@ Testing out Generators.
     npm install
     ```
 
-## Running the application
+## Running the applications
+
+generator test
 
 ```bash
-node dist/app/index.js
+node dist/app/index
+```
+
+WeakMap test
+
+```bash
+node dist/app/testPrivate
 ```
